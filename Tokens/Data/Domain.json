@@ -1,0 +1,25 @@
+{
+  "id": 23,
+  "globalId": "6e73e87a-6fa7-4d1f-bb39-0979d8a9ff62",
+  "namespace": {
+    "id": 6,
+    "globalId": "1b629779-66e7-46ab-9dd4-79d13d51e5d9",
+    "portalId": 0,
+    "name": "Data",
+    "description": "",
+    "isSystem": false
+  },
+  "name": "Domain",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "language": "csharp",
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "",
+    "debug": false,
+    "type": "razor"
+  }
+}

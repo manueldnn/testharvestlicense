@@ -1,0 +1,65 @@
+{
+  "Name": "test_files",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [
+    {
+      "Name": "fileid",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "number",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "RunSql",
+      "OrderIndex": 0,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select * from files\r\nwhere fileid = [fileid]",
+        "OnError": [],
+        "ShowErrors": "False",
+        "DbConnector": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "Database",
+          "EntireGroup": false
+        },
+        "BindTokens": [],
+        "OutputTokenName": "fileinfo",
+        "ExtractColumns": [
+          {
+            "name": "filename",
+            "value": "filename"
+          }
+        ]
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Untitled Action",
+      "ActionType": "RawResponse",
+      "OrderIndex": 1,
+      "Parameters": {
+        "Content": "[fileinfo:filename]",
+        "HttpCode": "",
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

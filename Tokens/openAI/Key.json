@@ -1,0 +1,21 @@
+{
+  "id": 22,
+  "globalId": "aae7121a-cbcf-4e76-8dd5-96e2cbb852e1",
+  "namespace": {
+    "id": 5,
+    "globalId": "87df73a6-49b0-4e5a-87d3-72a869263137",
+    "portalId": 0,
+    "name": "openAI",
+    "isSystem": false
+  },
+  "name": "Key",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "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",
+    "type": "string"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "Name": "test",
+  "Description": "Returns the information of a test record in JSON object format",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 7,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0189236c-bb1b-4ea0-9147-8d937ef3b900",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "0189236c-bb1b-4ea0-9147-8d937ef3b900",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "name",
+            "value": "[Record:name]"
+          },
+          {
+            "name": "date",
+            "value": "[Record:date]"
+          },
+          {
+            "name": "datetime",
+            "value": "[Record:datetime]"
+          },
+          {
+            "name": "url",
+            "value": "[Record:url]"
+          },
+          {
+            "name": "doc",
+            "value": "[Record:doc]"
+          },
+          {
+            "name": "img",
+            "value": "[Record:img]"
+          },
+          {
+            "name": "role",
+            "value": "[Record:role]"
+          },
+          {
+            "name": "user",
+            "value": "[Record:user]"
+          },
+          {
+            "name": "client",
+            "value": "[Record:client]"
+          },
+          {
+            "name": "currency",
+            "value": "[Record:currency]"
+          },
+          {
+            "name": "noI",
+            "value": "[Record:noI]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

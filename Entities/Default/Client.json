@@ -1,0 +1,372 @@
+{
+  "Children": [],
+  "DisplayInMenu": true,
+  "ParentPageId": 47,
+  "DisplayAfter": null,
+  "RecordNamePropertyId": 7,
+  "UpdateRecordNameProperty": null,
+  "ShowDashboardModule": true,
+  "Properties": [
+    {
+      "Id": 7,
+      "GlobalId": "3e825156-be0f-4051-94e7-2b889180698c",
+      "EntityVersionId": 5,
+      "Name": "Name",
+      "Type": {
+        "Id": "Text",
+        "Name": "Text",
+        "InputType": {
+          "Id": "Text",
+          "Name": "Text",
+          "ValueType": 2,
+          "Length": 450,
+          "Icon": "short_text"
+        }
+      },
+      "DefaultValue": null,
+      "NullRecordsValue": null,
+      "EntityVersionRefId": null,
+      "IsDeleted": false,
+      "IsRequired": true,
+      "IsSearchable": true,
+      "IsFilterable": false,
+      "IsSortable": true,
+      "OrderIndex": 1
+    },
+    {
+      "Id": 8,
+      "GlobalId": "8fd8e91d-683c-4f60-9ff2-80af0cfb9b1d",
+      "EntityVersionId": 5,
+      "Name": "Fav Color",
+      "Type": {
+        "Id": "Text",
+        "Name": "Text",
+        "InputType": {
+          "Id": "Text",
+          "Name": "Text",
+          "ValueType": 2,
+          "Length": 450,
+          "Icon": "short_text"
+        }
+      },
+      "DefaultValue": null,
+      "NullRecordsValue": null,
+      "EntityVersionRefId": null,
+      "IsDeleted": false,
+      "IsRequired": false,
+      "IsSearchable": false,
+      "IsFilterable": true,
+      "IsSortable": false,
+      "OrderIndex": 2
+    },
+    {
+      "Id": 9,
+      "GlobalId": "5bc84861-7247-4453-8ae9-44685149545d",
+      "EntityVersionId": 5,
+      "Name": "Birthdate",
+      "Type": {
+        "Id": "Date",
+        "Name": "Date",
+        "InputType": {
+          "Id": "Date",
+          "Name": "Date",
+          "ValueType": 3,
+          "Length": 3,
+          "Icon": "calendar_today"
+        }
+      },
+      "DefaultValue": null,
+      "NullRecordsValue": null,
+      "EntityVersionRefId": null,
+      "IsDeleted": false,
+      "IsRequired": false,
+      "IsSearchable": false,
+      "IsFilterable": false,
+      "IsSortable": true,
+      "OrderIndex": 3
+    },
+    {
+      "Id": 10,
+      "GlobalId": "411c9cbd-59e0-418a-b63e-00ac62f21061",
+      "EntityVersionId": 5,
+      "Name": "Address",
+      "Type": {
+        "Id": "LargeText",
+        "Name": "Large Text",
+        "InputType": {
+          "Id": "LargeText",
+          "Name": "Large Text",
+          "ValueType": 2,
+          "Length": 2147483647,
+          "Icon": "notes"
+        }
+      },
+      "DefaultValue": null,
+      "NullRecordsValue": null,
+      "EntityVersionRefId": null,
+      "IsDeleted": false,
+      "IsRequired": false,
+      "IsSearchable": true,
+      "IsFilterable": true,
+      "IsSortable": false,
+      "OrderIndex": 4
+    },
+    {
+      "Id": 11,
+      "GlobalId": "728892d1-c877-43ac-b94e-1b2cfbc9d615",
+      "EntityVersionId": 5,
+      "Name": "Currency",
+      "Type": {
+        "Id": "Money",
+        "Name": "Money",
+        "InputType": {
+          "Id": "Money",
+          "Name": "Money",
+          "ValueType": 8,
+          "Length": 17,
+          "Icon": "attach_money"
+        }
+      },
+      "DefaultValue": null,
+      "NullRecordsValue": null,
+      "EntityVersionRefId": null,
+      "IsDeleted": false,
+      "IsRequired": false,
+      "IsSearchable": false,
+      "IsFilterable": false,
+      "IsSortable": false,
+      "OrderIndex": 5
+    }
+  ],
+  "RolePermissions": {
+    "8": [
+      {
+        "Id": 17,
+        "PermissionType": {
+          "Id": 1,
+          "Name": "Can View"
+        },
+        "RoleId": 8,
+        "RoleName": "Users",
+        "Value": "all"
+      },
+      {
+        "Id": 18,
+        "PermissionType": {
+          "Id": 2,
+          "Name": "Can Add"
+        },
+        "RoleId": 8,
+        "RoleName": "Users",
+        "Value": "true"
+      },
+      {
+        "Id": 19,
+        "PermissionType": {
+          "Id": 3,
+          "Name": "Can Edit"
+        },
+        "RoleId": 8,
+        "RoleName": "Users",
+        "Value": "own"
+      },
+      {
+        "Id": 20,
+        "PermissionType": {
+          "Id": 4,
+          "Name": "Can Delete"
+        },
+        "RoleId": 8,
+        "RoleName": "Users",
+        "Value": "own"
+      }
+    ],
+    "6": [
+      {
+        "Id": 21,
+        "PermissionType": {
+          "Id": 1,
+          "Name": "Can View"
+        },
+        "RoleId": 6,
+        "RoleName": "Admins",
+        "Value": "all"
+      },
+      {
+        "Id": 22,
+        "PermissionType": {
+          "Id": 2,
+          "Name": "Can Add"
+        },
+        "RoleId": 6,
+        "RoleName": "Admins",
+        "Value": "true"
+      },
+      {
+        "Id": 23,
+        "PermissionType": {
+          "Id": 3,
+          "Name": "Can Edit"
+        },
+        "RoleId": 6,
+        "RoleName": "Admins",
+        "Value": "all"
+      },
+      {
+        "Id": 24,
+        "PermissionType": {
+          "Id": 4,
+          "Name": "Can Delete"
+        },
+        "RoleId": 6,
+        "RoleName": "Admins",
+        "Value": "all"
+      }
+    ],
+    "5": [
+      {
+        "Id": 25,
+        "PermissionType": {
+          "Id": 1,
+          "Name": "Can View"
+        },
+        "RoleId": 5,
+        "RoleName": "Citizen Developers",
+        "Value": "all"
+      },
+      {
+        "Id": 26,
+        "PermissionType": {
+          "Id": 2,
+          "Name": "Can Add"
+        },
+        "RoleId": 5,
+        "RoleName": "Citizen Developers",
+        "Value": "true"
+      },
+      {
+        "Id": 27,
+        "PermissionType": {
+          "Id": 3,
+          "Name": "Can Edit"
+        },
+        "RoleId": 5,
+        "RoleName": "Citizen Developers",
+        "Value": "all"
+      },
+      {
+        "Id": 28,
+        "PermissionType": {
+          "Id": 4,
+          "Name": "Can Delete"
+        },
+        "RoleId": 5,
+        "RoleName": "Citizen Developers",
+        "Value": "all"
+      }
+    ],
+    "9": [
+      {
+        "Id": 29,
+        "PermissionType": {
+          "Id": 1,
+          "Name": "Can View"
+        },
+        "RoleId": 9,
+        "RoleName": "Low-Code Engineer",
+        "Value": "all"
+      },
+      {
+        "Id": 30,
+        "PermissionType": {
+          "Id": 2,
+          "Name": "Can Add"
+        },
+        "RoleId": 9,
+        "RoleName": "Low-Code Engineer",
+        "Value": "true"
+      },
+      {
+        "Id": 31,
+        "PermissionType": {
+          "Id": 3,
+          "Name": "Can Edit"
+        },
+        "RoleId": 9,
+        "RoleName": "Low-Code Engineer",
+        "Value": "all"
+      },
+      {
+        "Id": 32,
+        "PermissionType": {
+          "Id": 4,
+          "Name": "Can Delete"
+        },
+        "RoleId": 9,
+        "RoleName": "Low-Code Engineer",
+        "Value": "all"
+      }
+    ],
+    "7": [
+      {
+        "Id": 33,
+        "PermissionType": {
+          "Id": 1,
+          "Name": "Can View"
+        },
+        "RoleId": 7,
+        "RoleName": "Managers",
+        "Value": "all"
+      },
+      {
+        "Id": 34,
+        "PermissionType": {
+          "Id": 2,
+          "Name": "Can Add"
+        },
+        "RoleId": 7,
+        "RoleName": "Managers",
+        "Value": "true"
+      },
+      {
+        "Id": 35,
+        "PermissionType": {
+          "Id": 3,
+          "Name": "Can Edit"
+        },
+        "RoleId": 7,
+        "RoleName": "Managers",
+        "Value": "all"
+      },
+      {
+        "Id": 36,
+        "PermissionType": {
+          "Id": 4,
+          "Name": "Can Delete"
+        },
+        "RoleId": 7,
+        "RoleName": "Managers",
+        "Value": "all"
+      }
+    ]
+  },
+  "Id": 5,
+  "GlobalId": "a375b670-b9b8-4ea6-8d82-34be6414b4fc",
+  "ConfigGenerationGlobalId": "a375b670-b9b8-4ea6-8d82-34be6414b4fc",
+  "VersionId": 5,
+  "EntityTabId": 45,
+  "Name": "Client",
+  "PluralName": "Clients",
+  "PageUiLibrary": 2,
+  "CreatedDate": "2023-09-18T15:42:02.6",
+  "CreatedBy": "SuperUser Account",
+  "LastModifiedBy": "SuperUser Account",
+  "LastModifiedOn": "2023-10-02T12:23:50.05",
+  "Icon": "table",
+  "Type": 0,
+  "BuiltInType": null,
+  "EnableIndexing": true,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad",
+  "EntityTabGlobalId": "3e36c110-6b35-42c3-a17f-33dba81a880b",
+  "EntityParentTabGlobalId": "42b7503d-ce95-4e75-9570-ea6731ccf73c"
+}

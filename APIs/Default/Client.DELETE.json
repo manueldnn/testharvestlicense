@@ -1,0 +1,61 @@
+{
+  "Name": "Client",
+  "Description": "Deletes the provided Client record",
+  "HttpMethod": "DELETE",
+  "IsEnabled": true,
+  "OrderIndex": 5,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.DeleteEntity.a375b670-b9b8-4ea6-8d82-34be6414b4fc",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.DeleteEntity",
+        "EntityIdentifier": "a375b670-b9b8-4ea6-8d82-34be6414b4fc",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [],
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

@@ -1,0 +1,24 @@
+{
+  "Name": "Peters-Verjaardag",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "RawResponse",
+      "OrderIndex": 1,
+      "Parameters": {
+        "Content": "6 november",
+        "HttpCode": "200",
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

@@ -1,0 +1,25 @@
+{
+  "id": 24,
+  "globalId": "77066400-8c52-4ab5-b544-cb0ae44f7fbe",
+  "namespace": {
+    "id": 6,
+    "globalId": "1b629779-66e7-46ab-9dd4-79d13d51e5d9",
+    "portalId": 0,
+    "name": "Data",
+    "description": "",
+    "isSystem": false
+  },
+  "name": "EvalCondition",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "language": "csharp",
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "~/bin/PlantAnApp.Lib.Helpers.dll",
+    "debug": false,
+    "type": "razor"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": 27,
+  "globalId": "cc33bf4f-4edc-4565-83b9-71a0444ae99e",
+  "namespace": {
+    "id": 6,
+    "globalId": "1b629779-66e7-46ab-9dd4-79d13d51e5d9",
+    "portalId": 0,
+    "name": "Data",
+    "description": "",
+    "isSystem": false
+  },
+  "name": "RazorToken79737",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "language": "csharp",
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "",
+    "debug": false,
+    "type": "razor"
+  }
+}

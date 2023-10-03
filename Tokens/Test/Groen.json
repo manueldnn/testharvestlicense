@@ -1,0 +1,22 @@
+{
+  "id": 21,
+  "globalId": "1a936fa4-a2d8-4bfd-93b9-16f093fb131b",
+  "namespace": {
+    "id": 4,
+    "globalId": "0d16e319-6ba3-42fb-a19e-60970832791c",
+    "portalId": 0,
+    "name": "Test",
+    "description": "Testing",
+    "isSystem": false
+  },
+  "name": "Groen",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "Green",
+    "type": "string"
+  }
+}

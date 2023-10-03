@@ -1,0 +1,84 @@
+{
+  "ApiId": "eb4a7b93c62a86b63cf3aa",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "get files",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "RepeatInterval",
+      "Parameters": {
+        "Start": "",
+        "Interval": {
+          "Qty": 1,
+          "Unit": {
+            "Value": "Minutes",
+            "IsExpression": false,
+            "Expression": null
+          }
+        },
+        "SkipIfRunning": true,
+        "OnMissfire": {
+          "Value": null,
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "RunSql",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "IsDisabled": false,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select * from files\r\nwhere fileid = 13",
+        "OnError": [],
+        "ShowErrors": "False",
+        "DbConnector": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "Database",
+          "EntireGroup": false
+        },
+        "BindTokens": [],
+        "OutputTokenName": "fileinfo",
+        "ExtractColumns": [
+          {
+            "name": "filename",
+            "value": "filename"
+          }
+        ]
+      }
+    },
+    {
+      "ActionType": "LogEvent",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 2,
+      "IsDisabled": false,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "3",
+        "LogProperties": [
+          {
+            "name": "fn",
+            "value": "[fileinfo:filename]"
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

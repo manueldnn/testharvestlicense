@@ -1,0 +1,17 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@using DnnSharp.Common.ExpressionEvaluator;
+@{
+ string output = "";
+ if(TknParams.Condition.ToString() != ""){
+ try {
+ var p = new CompiledExpression(TknParams.Condition.ToString());
+ p.Parse();
+ p.Compile();
+ output = p.Eval().ToString();
+ } catch (Exception e) {
+ throw new Exception("Expression is not in a correct format" + e.ToString());
+ }
+ }else{
+ output = "xxx";
+ }
+}@output

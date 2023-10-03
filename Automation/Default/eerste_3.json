@@ -1,0 +1,27 @@
+{
+  "ApiId": "57439390519aef6068eb76",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "eerste",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "ApplyTokens",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "RecursionCount": "1",
+        "Tokens": [
+          {
+            "name": "Name",
+            "value": "Peter"
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

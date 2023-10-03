@@ -1,0 +1,24 @@
+{
+  "id": 7,
+  "globalId": "4f3c6603-7ee7-444f-ac7a-0d47961e627f",
+  "namespace": {
+    "id": 1,
+    "globalId": "e94d02ce-7cff-4488-9aab-faa0e79933fc",
+    "name": "PAASysUpdates",
+    "description": "",
+    "isSystem": true
+  },
+  "name": "GetHotfixHighestState",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "IF EXISTS (\r\n    SELECT TOP 1 PSU.[State] FROM dbo.PlantAnApp_Updates_SpecificUpdates AS PSU\r\n    INNER JOIN dbo.PlantAnApp_Updates_Hotfixes AS PH ON PH.ProductID = PSU.Product\r\n    WHERE PSU.[State] = '<span class=\"badge bg-danger\">Critical</span>' AND PSU.Product = '[TknParams:ProductID]' AND PSU.Version > PH.InstalledVersion\r\n)\r\nBEGIN\r\n\tSELECT '<span class=\"badge bg-danger\">Critical</span>'\r\nEND\r\nELSE IF EXISTS (\r\n    SELECT TOP 1 PSU.[State] FROM dbo.PlantAnApp_Updates_SpecificUpdates AS PSU\r\n    INNER JOIN dbo.PlantAnApp_Updates_Hotfixes AS PH ON PH.ProductID = PSU.Product\r\n    WHERE PSU.[State] = '<span class=\"badge bg-success\">Recommended</span>' AND PSU.Product = '[TknParams:ProductID]' AND PSU.Version > PH.InstalledVersion\r\n)\r\nBEGIN\r\n\tSELECT '<span class=\"badge bg-success\">Recommended</span>'\r\nEND\r\nELSE\r\nBEGIN\r\n\tSELECT [State] FROM dbo.PlantAnApp_Updates_Hotfixes WHERE Id = '[TknParams:HotfixID]'\r\nEND",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
